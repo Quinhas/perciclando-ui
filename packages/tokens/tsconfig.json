@@ -1,0 +1,4 @@
+{
+  "extends": "@perciclando-ui/ts-config/base.json",
+  "include": ["src"]
+}

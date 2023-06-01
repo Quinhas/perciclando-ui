@@ -1,0 +1,3 @@
+{
+  "extends": ["@perciclando-ui/eslint-config"]
+}

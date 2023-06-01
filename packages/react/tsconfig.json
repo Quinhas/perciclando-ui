@@ -1,0 +1,6 @@
+{
+  "extends": "@perciclando-ui/ts-config/react.json",
+  "include": [
+    "src"
+  ]
+}
