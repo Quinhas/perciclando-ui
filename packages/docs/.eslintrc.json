@@ -1,3 +1,6 @@
 {
-  "extends": ["@perciclando-ui/eslint-config"]
+  "extends": [
+    "@perciclando-ui/eslint-config",
+    "plugin:storybook/recommended"
+  ]
 }

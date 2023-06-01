@@ -1,4 +1,4 @@
-import { styled } from '../../styles'
+import { styled } from '../../styles';
 
 export const InputContainer = styled('div', {
   backgroundColor: '$zinc900',
@@ -9,6 +9,17 @@ export const InputContainer = styled('div', {
   display: 'flex',
   alignItems: 'baseline',
 
+  variants: {
+    size: {
+      sm: {
+        padding: '$2 $3',
+      },
+      md: {
+        padding: '$3 $4',
+      },
+    },
+  },
+
   '&:has(input:focus)': {
     borderColor: '$primary300',
   },
@@ -17,14 +28,18 @@ export const InputContainer = styled('div', {
     opacity: 0.5,
     cursor: 'not-allowed',
   },
-})
+
+  defaultVariants: {
+    size: 'md',
+  },
+});
 
 export const Prefix = styled('span', {
   fontFamily: '$default',
   fontSize: '$sm',
   color: '$zinc400',
   fontWeight: '$regular',
-})
+});
 
 export const Input = styled('input', {
   fontFamily: '$default',
@@ -43,7 +58,7 @@ export const Input = styled('input', {
     cursor: 'not-allowed',
   },
 
-  '&:placeholder': {
+  '&::placeholder': {
     color: '$zinc400',
   },
-})
+});

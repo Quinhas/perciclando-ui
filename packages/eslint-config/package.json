@@ -1,11 +1,11 @@
 {
   "name": "@perciclando-ui/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "private": true,
   "main": "index.js",
   "devDependencies": {
-    "@rocketseat/eslint-config": "^1.2.0",
+    "@quinhas/eslint-config": "^1.0.7",
     "eslint": "8.41.0"
   }
 }

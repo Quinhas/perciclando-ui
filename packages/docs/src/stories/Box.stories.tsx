@@ -1,5 +1,5 @@
-import { Box, BoxProps, Text } from '@perciclando-ui/react'
-import type { Meta, StoryObj } from '@storybook/react'
+import { Box, BoxProps, Text } from '@perciclando-ui/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<BoxProps> = {
   title: 'Surfaces/Box',
@@ -18,8 +18,8 @@ const meta: Meta<BoxProps> = {
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Primary: StoryObj<BoxProps> = {}
+export const Primary: StoryObj<BoxProps> = {};

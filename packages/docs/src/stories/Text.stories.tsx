@@ -1,5 +1,5 @@
-import { Text, TextProps } from '@perciclando-ui/react'
-import type { Meta, StoryObj } from '@storybook/react'
+import { Text, TextProps } from '@perciclando-ui/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<TextProps> = {
   title: 'Typography/Text',
@@ -31,8 +31,8 @@ const meta: Meta<TextProps> = {
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Primary: StoryObj<TextProps> = {}
+export const Primary: StoryObj<TextProps> = {};

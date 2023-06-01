@@ -1,5 +1,5 @@
-import { Box, Input, InputProps, Text } from '@perciclando-ui/react'
-import type { Meta, StoryObj } from '@storybook/react'
+import { Box, Input, InputProps, Text } from '@perciclando-ui/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<InputProps> = {
   title: 'Form/Input',
@@ -15,27 +15,28 @@ const meta: Meta<InputProps> = {
           <Text size="sm">Label</Text>
           {Story()}
         </Box>
-      )
+      );
     },
   ],
-}
+};
 
-export default meta
+export default meta;
 
 export const Primary: StoryObj<InputProps> = {
   args: {
     placeholder: 'Type your name',
   },
-}
+};
 
 export const Disabled: StoryObj<InputProps> = {
   args: {
     disabled: true,
   },
-}
+};
 
 export const WithPrefix: StoryObj<InputProps> = {
   args: {
     prefix: 'cal.com/',
+    placeholder: 'your-username',
   },
-}
+};

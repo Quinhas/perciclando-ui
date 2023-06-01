@@ -77,5 +77,5 @@ export const colors = {
   zinc600: '#52525B',
   zinc700: '#3F3F46',
   zinc800: '#27272A',
-  zinc900: '#18181B'
+  zinc900: '#18181B',
 };

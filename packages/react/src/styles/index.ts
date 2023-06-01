@@ -26,12 +26,12 @@ export const {
   },
 
   theme: {
-    colors: colors,
-    fontSizes: fontSizes,
-    fontWeights: fontWeights,
-    fonts: fonts,
-    lineHeights: lineHeights,
-    radii: radii,
-    space: space,
+    colors,
+    fontSizes,
+    fontWeights,
+    fonts,
+    lineHeights,
+    radii,
+    space,
   },
 });
