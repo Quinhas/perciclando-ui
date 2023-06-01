@@ -3,7 +3,7 @@
   <h1>Perciclando - Design System</h1>
 </div>
 
-<div style="display: flex; flex-wrap: wrap; gap: 0.25rem; justify-content: center;">
+<div align="center">
   <a href="https://github.com/Quinhas/perciclando-ui/fork" target="_blank">
     <img src="https://img.shields.io/github/forks/Quinhas/perciclando-ui?style=flat-square&" alt="Badge showing the total of project forks"/>
   </a>
