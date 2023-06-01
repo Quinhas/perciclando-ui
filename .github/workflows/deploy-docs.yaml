@@ -12,16 +12,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
           version: 8.5.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
 
@@ -32,6 +33,6 @@ jobs:
 
       - name: Deploy storybook
         working-directory: ./packages/docs
-        run: touch storybook-static/.nojekyll && pnpm deploy-storybook -- --ci --out=storybook-static
+        run: pnpm deploy-storybook -- --ci --out=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
