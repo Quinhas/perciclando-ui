@@ -1,5 +1,5 @@
-import { Heading, HeadingProps } from '@perciclando-ui/react'
-import type { Meta, StoryObj } from '@storybook/react'
+import { Heading, HeadingProps } from '@perciclando-ui/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<HeadingProps> = {
   title: 'Typography/Heading',
@@ -16,8 +16,8 @@ const meta: Meta<HeadingProps> = {
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Primary: StoryObj<HeadingProps> = {}
+export const Primary: StoryObj<HeadingProps> = {};

@@ -1,10 +1,13 @@
-import { colors } from '@perciclando-ui/tokens'
-import { getContrast } from 'polished'
+import { colors } from '@perciclando-ui/tokens';
+import { getContrast } from 'polished';
 
 export function ColorsGrid() {
   return Object.entries(colors).map(([key, color]) => {
     return (
-      <div key={key} style={{ backgroundColor: color, padding: '2rem' }}>
+      <div
+        key={key}
+        style={{ backgroundColor: color, padding: '2rem' }}
+      >
         <div
           style={{
             display: 'flex',
@@ -16,6 +19,6 @@ export function ColorsGrid() {
           <strong>${key}</strong>
         </div>
       </div>
-    )
-  })
+    );
+  });
 }

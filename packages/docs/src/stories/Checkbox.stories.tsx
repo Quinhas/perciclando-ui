@@ -1,5 +1,5 @@
-import { Box, Checkbox, CheckboxProps, Text } from '@perciclando-ui/react'
-import type { Meta, StoryObj } from '@storybook/react'
+import { Box, Checkbox, CheckboxProps, Text } from '@perciclando-ui/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<CheckboxProps> = {
   title: 'Form/Checkbox',
@@ -15,11 +15,11 @@ const meta: Meta<CheckboxProps> = {
           {Story()}
           <Text size="sm">Accept terms of use</Text>
         </Box>
-      )
+      );
     },
   ],
-}
+};
 
-export default meta
+export default meta;
 
-export const Primary: StoryObj<CheckboxProps> = {}
+export const Primary: StoryObj<CheckboxProps> = {};

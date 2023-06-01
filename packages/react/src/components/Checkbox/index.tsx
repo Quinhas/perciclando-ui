@@ -1,6 +1,6 @@
-import { Check } from '@phosphor-icons/react'
-import { ComponentProps } from 'react'
-import { CheckboxContainer, CheckboxIndicator } from './styles'
+import { Check } from '@phosphor-icons/react';
+import { ComponentProps } from 'react';
+import { CheckboxContainer, CheckboxIndicator } from './styles';
 
 export interface CheckboxProps
   extends ComponentProps<typeof CheckboxContainer> {}
@@ -12,7 +12,7 @@ export function Checkbox(props: CheckboxProps) {
         <Check weight="bold" />
       </CheckboxIndicator>
     </CheckboxContainer>
-  )
+  );
 }
 
-Checkbox.displayName = 'Checkbox'
+Checkbox.displayName = 'Checkbox';

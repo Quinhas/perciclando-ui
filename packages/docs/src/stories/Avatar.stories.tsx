@@ -1,5 +1,5 @@
-import { Avatar, AvatarProps } from '@perciclando-ui/react'
-import type { Meta, StoryObj } from '@storybook/react'
+import { Avatar, AvatarProps } from '@perciclando-ui/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<AvatarProps> = {
   title: 'Data display/Avatar',
@@ -15,13 +15,13 @@ const meta: Meta<AvatarProps> = {
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Primary: StoryObj<AvatarProps> = {}
+export const Primary: StoryObj<AvatarProps> = {};
 export const WithFallback: StoryObj<AvatarProps> = {
   args: {
     src: undefined,
   },
-}
+};
