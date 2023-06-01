@@ -33,6 +33,6 @@ jobs:
 
       - name: Deploy storybook
         working-directory: ./packages/docs
-        run: pnpm deploy-storybook -- --ci --out=storybook-static
+        run: pnpm deploy-storybook -- --script=build --ci 
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
