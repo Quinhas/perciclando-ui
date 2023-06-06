@@ -1,96 +1,50 @@
-import { ComponentProps, ElementType } from 'react';
-import { styled } from '../../styles';
+import { CircleNotch } from '@phosphor-icons/react';
+import { ComponentProps, ReactNode } from 'react';
+import { StyledButton } from './styles';
 
-export const Button = styled('button', {
-  all: 'unset',
-  borderRadius: '$sm',
-  fontSize: '$sm',
-  fontWeight: '$medium',
-  fontFamily: '$default',
-  textAlign: 'center',
-  minWidth: 120,
-  boxSizing: 'border-box',
-  padding: '0 $4',
-
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$2',
-
-  cursor: 'pointer',
-
-  svg: {
-    width: '$4',
-    height: '$4',
-  },
-
-  '&:disabled': {
-    cursor: 'not-allowed',
-  },
-
-  '&:focus': {
-    boxShadow: '0 0 0 2px $colors$gray100',
-  },
-
-  variants: {
-    variant: {
-      primary: {
-        color: '$white',
-        background: '$primary500',
-
-        '&:not(:disabled):hover': {
-          background: '$primary300',
-        },
-
-        '&:disabled': {
-          background: '$zinc200',
-        },
-      },
-      secondary: {
-        color: '$primary500',
-        border: '2px solid $primary500',
-
-        '&:not(:disabled):hover': {
-          background: '$primary500',
-          color: '$white',
-        },
-
-        '&:disabled': {
-          background: '$zinc200',
-          color: '$zinc200',
-        },
-      },
-      tertiary: {
-        color: '$zinc100',
-
-        '&:not(:disabled):hover': {
-          color: '$white',
-        },
-
-        '&:disabled': {
-          color: '$zinc600',
-        },
-      },
-    },
-
-    size: {
-      sm: {
-        height: '$10',
-      },
-      md: {
-        height: '$12',
-      },
-    },
-  },
-
-  defaultVariants: {
-    variant: 'primary',
-    size: 'md',
-  },
-});
-
-export interface ButtonProps extends ComponentProps<typeof Button> {
-  as?: ElementType;
+export interface ButtonProps extends ComponentProps<typeof StyledButton> {
+  isDisabled?: boolean;
+  loadingText?: string;
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
+  spinnerPlacement?: 'start' | 'end';
+  spinner?: ReactNode;
 }
 
-Button.displayName = 'Button';
+export function Button({
+  isLoading = false,
+  loadingText = 'Loading',
+  isDisabled = false,
+  disabled = false,
+  leftIcon,
+  rightIcon,
+  children,
+  spinnerPlacement = 'start',
+  spinner = <CircleNotch weight="bold" />,
+  ...rest
+}: ButtonProps) {
+  if (isLoading) {
+    return (
+      <StyledButton
+        isLoading
+        disabled
+        {...rest}
+      >
+        {spinnerPlacement === 'start' && spinner}
+        {loadingText}
+        {spinnerPlacement === 'end' && spinner}
+      </StyledButton>
+    );
+  }
+
+  return (
+    <StyledButton
+      disabled={isDisabled || disabled}
+      {...rest}
+    >
+      {!leftIcon && leftIcon}
+      {children}
+      {!rightIcon && rightIcon}
+    </StyledButton>
+  );
+}
