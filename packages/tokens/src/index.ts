@@ -4,5 +4,6 @@ export * from './font-weights';
 export * from './fonts';
 export * from './line-heights';
 export * from './radii';
+export * from './sizes';
 export * from './space';
 export * from './transitions';
