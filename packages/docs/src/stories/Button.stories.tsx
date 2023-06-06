@@ -1,30 +1,71 @@
-import { Button, ButtonProps } from '@perciclando-ui/react';
-import { ArrowRight } from '@phosphor-icons/react';
+import { Button, type ButtonProps } from '@perciclando-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<ButtonProps> = {
   title: 'Form/Button',
   component: Button,
   args: {
-    children: 'Send',
-    variant: 'primary',
+    children: 'Button',
+    variant: 'solid',
+    colorScheme: 'primary',
     size: 'md',
-    disabled: false,
+    isDisabled: false,
+    loadingText: 'Loading',
+    isLoading: false,
+    spinnerPlacement: 'start',
   },
   argTypes: {
+    spinnerPlacement: {
+      options: ['start', 'end'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
+    loadingText: {
+      defaultValue: 'Loading',
+      description: 'The loading text when loading state is true',
+      type: 'string',
+    },
+    isLoading: {
+      type: 'boolean',
+    },
+    colorScheme: {
+      name: 'colorScheme',
+      defaultValue: 'primary',
+      options: [
+        'blue',
+        'green',
+        'red',
+        'yellow',
+        'gray',
+        'zinc',
+        'primary',
+        'white',
+        'black',
+        'facebook',
+        'twitter',
+        'linkedin',
+        'messenger',
+        'whatsapp',
+        'telegram',
+      ],
+      control: {
+        type: 'inline-radio',
+      },
+    },
     variant: {
-      options: ['primary', 'secondary', 'tertiary'],
+      options: ['solid', 'outline', 'ghost', 'link'],
       control: {
         type: 'inline-radio',
       },
     },
     size: {
-      options: ['sm', 'md'],
+      options: ['xs', 'sm', 'md', 'lg'],
       control: {
         type: 'inline-radio',
       },
     },
-    disabled: {
+    isDisabled: {
       control: {
         type: 'boolean',
       },
@@ -37,42 +78,23 @@ const meta: Meta<ButtonProps> = {
 
 export default meta;
 
-export const Primary: StoryObj<ButtonProps> = {};
-
-export const Secondary: StoryObj<ButtonProps> = {
+export const Solid: StoryObj<ButtonProps> = {
   args: {
-    variant: 'secondary',
-    children: 'Create new',
+    variant: 'solid',
   },
 };
-
-export const Tertiary: StoryObj<ButtonProps> = {
+export const Outline: StoryObj<ButtonProps> = {
   args: {
-    variant: 'tertiary',
-    children: 'Cancel',
+    variant: 'outline',
   },
 };
-
-export const Small: StoryObj<ButtonProps> = {
+export const Ghost: StoryObj<ButtonProps> = {
   args: {
-    size: 'sm',
+    variant: 'ghost',
   },
 };
-
-export const WithIcon: StoryObj<ButtonProps> = {
+export const Link: StoryObj<ButtonProps> = {
   args: {
-    children: (
-      <>
-        Next step
-        <ArrowRight weight="bold" />
-      </>
-    ),
-  },
-};
-
-export const Disabled: StoryObj<ButtonProps> = {
-  args: {
-    disabled: true,
-    children: 'Cancel',
+    variant: 'link',
   },
 };
